@@ -10,7 +10,7 @@ pipeline {
                 bat '''
                     if exist dotnet rmdir /s /q dotnet
                     mkdir dotnet
-                    powershell -Command "Invoke-WebRequest -OutFile dotnet-sdk.zip https://download.visualstudio.microsoft.com/download/pr/ce61b908-938b-43ac-8a5d-b6fdf96e66ac/ee308870d3859abdf2a08e44c01e6b2f/dotnet-sdk-8.0.301-win-x64.zip"
+                    powershell -Command "Invoke-WebRequest -OutFile dotnet-sdk.zip https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.314/dotnet-sdk-8.0.314-win-x64.zip"
                     powershell -Command "Expand-Archive -Path dotnet-sdk.zip -DestinationPath dotnet"
                     del dotnet-sdk.zip
                 '''
